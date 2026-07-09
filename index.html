@@ -1,10 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<html lang="id">
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Identifikasi Perumahan</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Flow Chart Identifikasi Perumahan</title>
 
 <style type="text/css">
 
@@ -13,36 +17,69 @@ html, body{
     padding:0;
     width:100%;
     height:100%;
-    overflow:hidden;
+    overflow:auto;
+    background:#FFFFFF;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-#container{
-    position:relative;
-    width:100vw;
+.style1{
+    font-size:25px;
+    font-weight:bold;
+}
+
+.container{
+ 	width:100vw;
     height:100vh;
-}
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
 
-#container img{
+.container img{
     width:100%;
     height:100%;
     object-fit:contain;
     display:block;
+    user-select:none;
+    -webkit-user-select:none;
 }
 
-#kliknext{
-    position:absolute;
-    right:40px;
-    bottom:30px;
+img{
+    -webkit-user-select:none;
+    user-select:none;
+    pointer-events:none;
+}
+/* Tombol KEMBALI */
 
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:30px;
-    font-weight:bold;
-    color:#FFFFFF;
+#kembali{
+
+    position:fixed;
+    left:20px;
+    bottom:20px;
 
     background:#0066CC;
-    padding:10px 20px;
+    color:#FFFFFF;
+
+    font-size:16px;
+    font-weight:bold;
+    font-family:Arial, Helvetica, sans-serif;
+
+    padding:8px 16px;
+
     border:2px solid #FFFFFF;
     border-radius:8px;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    z-index:9999;
+}
+
+#kembali:hover{
+
+    background:#004C99;
+
 }
 
 </style>
@@ -51,13 +88,104 @@ html, body{
 
 <body>
 
-<div id="container">
+<div class="container">
 
-    <img src="images/Slide_Cover.png" alt="Slide Cover" />
+<p class="style1" align="center">
 
-    <div id="kliknext"><a href="produksi_peta.html">KLIK NEXT</a></div>
+<img
+src="images/Flow Chart Produksi Peta Terdampak bencana_3.png"
+usemap="#Map"
+alt="Flowchart" />
+
+<map name="Map" id="Map">
+  <area shape="rect"
+coords="669,818,858,864"
+href="form4a4.html"
+target="_self" />
+  <area shape="rect"
+coords="503,623,700,673"
+href="Form 4.A.12.pdf"
+target="_self" />
+  <area shape="rect"
+coords="937,536,1133,609"
+href="peta04.html"
+target="_self" />
+  <area shape="rect"
+coords="505,534,701,607"
+href="peta02.html"
+target="_self" />
+  <area shape="rect"
+coords="1224,727,1492,812"
+href="peta09.html"
+target="_self" />
+  <area shape="rect"
+coords="924,727,1192,812"
+href="peta08.html"
+target="_self" />
+  <area shape="rect"
+coords="632,726,900,811"
+href="peta07.html"
+target="_self" />
+  <area shape="rect"
+coords="335,726,603,811"
+href="peta06.html"
+target="_self" />
+  <area shape="rect"
+coords="24,726,292,811"
+href="peta05.html"
+target="_self" />
+  <area shape="rect"
+coords="722,536,918,609"
+href="peta03.html"
+target="_self" />
+  <area shape="rect"
+coords="720,624,917,674"
+href="form4a11.html"
+target="_self" />
+  <area shape="rect"
+coords="936,624,1133,674"
+href="form4a10.html"
+target="_self" />
+  <area shape="rect"
+coords="319,603,558,676"
+href="peta01.html"
+target="_self" />
+  <area shape="rect"
+coords="346,387,549,445"
+href="unitrumah.html"
+target="_self" />
+  <area shape="rect"
+coords="346,318,549,376"
+href="permukiman.html"
+target="_self" />
+
+<area shape="rect"
+coords="40,353,265,395"
+href="koordinat.html"
+target="_self" alt="Hasil Survey" />
+</map>
+
+</p>
 
 </div>
 
+<!-- Tombol KEMBALI -->
+
+<a href="index.html" id="kembali">KEMBALI</a>
+
+<!-- imageMapResizer -->
+<script src="js/imageMapResizer.min.js"></script>
+
+<script type="text/javascript">
+
+window.onload = function(){
+
+    imageMapResize();
+
+};
+
+</script>
+
 </body>
+
 </html>
