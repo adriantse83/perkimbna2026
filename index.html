@@ -1,48 +1,129 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="id">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Identifikasi Perumahan</title>
 
-<style type="text/css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-html, body{
+<title>Identifikasi Perumahan Kota Banda Aceh</title>
+
+<style>
+
+*{
     margin:0;
     padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+
     width:100%;
     height:100%;
     overflow:hidden;
+    background:#ffffff;
+
+    font-family:Arial, Helvetica, sans-serif;
+
 }
 
 #container{
+
     position:relative;
+
     width:100vw;
     height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
 }
+
+/* Cover */
 
 #container img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
+
+    max-width:100%;
+    max-height:100%;
+
+    width:auto;
+    height:auto;
+
     display:block;
+
+    user-select:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+
+    pointer-events:none;
+
 }
 
-#kliknext{
-    position:absolute;
-    right:40px;
-    bottom:30px;
+/* Tombol */
 
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:30px;
-    font-weight:bold;
-    color:#FFFFFF;
+#kliknext{
+
+    position:absolute;
+
+    right:4%;
+    bottom:4%;
+
+    z-index:1000;
+
+}
+
+#kliknext a{
+
+    display:inline-block;
 
     background:#0066CC;
-    padding:10px 20px;
+
+    color:#FFFFFF;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    font-size:clamp(15px,2vw,30px);
+
+    padding:12px 24px;
+
     border:2px solid #FFFFFF;
+
     border-radius:8px;
+
+    transition:.25s;
+
+}
+
+#kliknext a:hover{
+
+    background:#004999;
+
+}
+
+/* Smartphone */
+
+@media (max-width:768px){
+
+#kliknext{
+
+    right:15px;
+    bottom:15px;
+
+}
+
+#kliknext a{
+
+    font-size:16px;
+
+    padding:10px 18px;
+
+}
+
 }
 
 </style>
@@ -53,11 +134,22 @@ html, body{
 
 <div id="container">
 
-    <img src="images/Slide_Cover.png" alt="Slide Cover" />
+<img
+src="images/Slide_Cover.png"
+alt="Cover" />
 
-    <div id="kliknext"><a href="produksi_peta.html">KLIK NEXT</a></div>
+<div id="kliknext">
+
+<a href="produksi_peta.html">
+
+KLIK NEXT
+
+</a>
+
+</div>
 
 </div>
 
 </body>
+
 </html>
