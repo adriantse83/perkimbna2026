@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Peta Non Zona Rumah</title>
+
+<style type="text/css">
+
+html,body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#FFFFFF;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+h1{
+    margin:10px 0;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+}
+
+#viewer{
+    flex:1;
+    overflow:hidden;
+    cursor:grab;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#FFFFFF;
+}
+
+#viewer img{
+    max-width:100%;
+    max-height:100%;
+    user-select:none;
+    -webkit-user-drag:none;
+    transform-origin:center center;
+}
+
+/* Toolbar Zoom */
+.toolbar{
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index:9999;
+}
+
+.toolbar button{
+
+    width:42px;
+    height:42px;
+
+    font-size:24px;
+    font-weight:bold;
+
+    margin-left:5px;
+
+    cursor:pointer;
+
+    border-radius:6px;
+    border:1px solid #999;
+
+    background:#FFFFFF;
+}
+
+/* Tombol Kembali */
+
+#kembali{
+
+    position:fixed;
+
+    left:20px;
+    bottom:20px;
+
+    background:#0066CC;
+    color:#FFFFFF;
+
+    padding:10px 20px;
+
+    font-size:20px;
+    font-weight:bold;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.35);
+
+    z-index:9999;
+
+}
+
+#kembali:hover{
+
+    background:#004C99;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="toolbar">
+
+<button onclick="zoomIn()">+</button>
+
+<button onclick="zoomOut()">-</button>
+
+<button onclick="resetZoom()">¦</button>
+
+</div>
+
+<div class="container">
+
+<h1>PETA SEBARAN UNIT RUMAH EKSISTING PADA KAWASAN BUKAN LAHAN ZONA PERUMAHAN </h1>
+
+<div id="viewer">
+
+<img id="peta"
+src="images/F_01.117104_PetaSebaranRumahEksisting_NonZonaPerumahan_SyiahKuala.jpg"
+alt="Peta Kawasan Permukiman Kumuh"/>
+
+</div>
+
+</div>
+
+<a href="produksi_peta.html" id="kembali">&#8592; KEMBALI</a>
+
+<script type="text/javascript">
+
+var img=document.getElementById("peta");
+
+var scale=1;
+
+var posX=0;
+
+var posY=0;
+
+function updateTransform(){
+
+    img.style.transform=
+    "translate("+posX+"px,"+posY+"px) scale("+scale+")";
+
+}
+
+function zoomIn(){
+
+    scale*=1.2;
+
+    updateTransform();
+
+}
+
+function zoomOut(){
+
+    scale/=1.2;
+
+    if(scale<0.2) scale=0.2;
+
+    updateTransform();
+
+}
+
+function resetZoom(){
+
+    scale=1;
+
+    posX=0;
+
+    posY=0;
+
+    updateTransform();
+
+}
+
+/* Zoom dengan scroll mouse */
+
+document.getElementById("viewer").addEventListener("wheel",function(e){
+
+    e.preventDefault();
+
+    if(e.deltaY<0)
+
+        scale*=1.1;
+
+    else
+
+        scale/=1.1;
+
+    if(scale<0.2) scale=0.2;
+
+    updateTransform();
+
+});
+
+/* Drag gambar */
+
+var dragging=false;
+
+var startX,startY;
+
+img.onmousedown=function(e){
+
+    dragging=true;
+
+    startX=e.clientX-posX;
+
+    startY=e.clientY-posY;
+
+    document.getElementById("viewer").style.cursor="grabbing";
+
+}
+
+document.onmouseup=function(){
+
+    dragging=false;
+
+    document.getElementById("viewer").style.cursor="grab";
+
+}
+
+document.onmousemove=function(e){
+
+    if(!dragging) return;
+
+    posX=e.clientX-startX;
+
+    posY=e.clientY-startY;
+
+    updateTransform();
+
+}
+
+</script>
+
+</body>
+
+</html>
