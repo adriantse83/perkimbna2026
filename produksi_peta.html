@@ -1,194 +1,29 @@
 <!DOCTYPE html>
 <html lang="id">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Flow Chart Identifikasi Perumahan</title>
-
-<style type="text/css">
-
-html,body{
-    margin:0;
-    padding:0;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    background:#ffffff;
-}
-
-.container{
-    width:100vw;
-    height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.container img{
-
-    max-width:100%;
-    max-height:100%;
-
-    width:auto;
-    height:auto;
-
-    display:block;
-
-    object-fit:contain;
-
-    user-select:none;
-    -webkit-user-select:none;
-}
-img{
-    user-select:none;
-    -webkit-user-select:none;
-    -webkit-user-drag:none;
-
-}
-
-img{
-    -webkit-user-select:none;
-    user-select:none;}
-/* Tombol KEMBALI */
-
-#kembali{
-
-    position:fixed;
-    left:20px;
-    bottom:20px;
-
-    background:#0066CC;
-    color:#FFFFFF;
-
-    font-size:16px;
-    font-weight:bold;
-    font-family:Arial, Helvetica, sans-serif;
-
-    padding:8px 16px;
-
-    border:2px solid #FFFFFF;
-    border-radius:8px;
-
-    text-decoration:none;
-
-    cursor:pointer;
-
-    z-index:9999;
-}
-
-#kembali:hover{
-
-    background:#004C99;
-
-}
-
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow:hidden;background:#fff}
+body{display:flex;justify-content:center;align-items:center;font-family:Arial}
+#wrap{position:relative;display:inline-block;max-width:100vw;max-height:100vh}
+#wrap img{display:block;max-width:100vw;max-height:100vh;width:auto;height:auto;
+user-select:none;-webkit-user-select:none;-webkit-user-drag:none;pointer-events:none}
+.hotspot{position:absolute;display:block;background:transparent;
+-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
+.h1{left:43.55469%;top:89.64844%;width:12.30469%;height:4.49219%;}.h2{left:46.80990%;top:59.76562%;width:12.76042%;height:7.12891%;}.h3{left:33.00781%;top:59.57031%;width:12.76042%;height:7.12891%;}.h4{left:60.74219%;top:68.35938%;width:12.82552%;height:4.88281%;}.h5{left:79.62240%;top:79.19922%;width:17.44792%;height:8.30078%;}.h6{left:60.28646%;top:79.19922%;width:17.44792%;height:8.30078%;}.h7{left:41.27604%;top:79.10156%;width:17.44792%;height:8.30078%;}.h8{left:21.94010%;top:79.10156%;width:17.44792%;height:8.30078%;}.h9{left:1.69271%;top:79.10156%;width:17.44792%;height:8.30078%;}.h10{left:60.80729%;top:59.76562%;width:12.76042%;height:7.12891%;}.h11{left:46.67969%;top:68.35938%;width:12.82552%;height:4.88281%;}.h12{left:32.55208%;top:68.26172%;width:12.82552%;height:4.88281%;}.h13{left:20.57292%;top:66.30859%;width:15.55990%;height:7.12891%;}.h14{left:22.59115%;top:37.98828%;width:13.21615%;height:5.66406%;}.h15{left:22.59115%;top:44.72656%;width:13.21615%;height:5.66406%;}.h16{left:2.73438%;top:39.45312%;width:14.64844%;height:4.10156%;}
+#kembali{position:fixed;left:20px;bottom:20px;background:#0066CC;color:#fff;
+text-decoration:none;padding:8px 16px;border:2px solid #fff;border-radius:8px;font-weight:bold;z-index:9999}
+@media(max-width:768px){#kembali{left:50%;transform:translateX(-50%);bottom:15px;}}
 </style>
-
 </head>
-
 <body>
-
-<div class="container">
-
-<img src="images/Flow Chart Produksi Peta Terdampak bencana_3.png"
-usemap="#Map"
-alt="Flowchart">
-
-<map name="Map" id="Map">
-  <area shape="rect"
-coords="669,818,858,864"
-href="form4a4.html"
-target="_self" />
-  <area shape="rect"
-coords="503,623,700,673"
-href="Form 4.A.12.pdf"
-target="_self" />
-  <area shape="rect"
-coords="937,536,1133,609"
-href="peta04.html"
-target="_self" />
-  <area shape="rect"
-coords="505,534,701,607"
-href="peta02.html"
-target="_self" />
-  <area shape="rect"
-coords="1224,727,1492,812"
-href="peta09.html"
-target="_self" />
-  <area shape="rect"
-coords="924,727,1192,812"
-href="peta08.html"
-target="_self" />
-  <area shape="rect"
-coords="632,726,900,811"
-href="peta07.html"
-target="_self" />
-  <area shape="rect"
-coords="335,726,603,811"
-href="peta06.html"
-target="_self" />
-  <area shape="rect"
-coords="24,726,292,811"
-href="peta05.html"
-target="_self" />
-  <area shape="rect"
-coords="722,536,918,609"
-href="peta03.html"
-target="_self" />
-  <area shape="rect"
-coords="720,624,917,674"
-href="form4a11.html"
-target="_self" />
-  <area shape="rect"
-coords="936,624,1133,674"
-href="form4a10.html"
-target="_self" />
-  <area shape="rect"
-coords="319,603,558,676"
-href="peta01.html"
-target="_self" />
-  <area shape="rect"
-coords="346,387,549,445"
-href="unitrumah.html"
-target="_self" />
-  <area shape="rect"
-coords="346,318,549,376"
-href="permukiman.html"
-target="_self" />
-
-<area shape="rect"
-coords="40,353,265,395"
-href="koordinat.html"
-target="_self" alt="Hasil Survey" />
-</map>
-
-</p>
-
+<div id="wrap">
+<img src="images/Flow Chart Produksi Peta Terdampak bencana_3.png" alt="Flowchart">
+<a class="hotspot h1" href="form4a4.html"></a><a class="hotspot h2" href="peta03.html"></a><a class="hotspot h3" href="peta02.html"></a><a class="hotspot h4" href="form4a10.html"></a><a class="hotspot h5" href="peta09.html"></a><a class="hotspot h6" href="peta08.html"></a><a class="hotspot h7" href="peta07.html"></a><a class="hotspot h8" href="peta06.html"></a><a class="hotspot h9" href="peta05.html"></a><a class="hotspot h10" href="peta04.html"></a><a class="hotspot h11" href="form4a11.html"></a><a class="hotspot h12" href="Form 4.A.12.pdf"></a><a class="hotspot h13" href="peta01.html"></a><a class="hotspot h14" href="permukiman.html"></a><a class="hotspot h15" href="unitrumah.html"></a><a class="hotspot h16" href="koordinat.html"></a>
 </div>
-
-<!-- Tombol KEMBALI -->
-
-<a href="index.html" id="kembali">KEMBALI</a>
-
-<!-- imageMapResizer -->
-<script src="js/imageMapResizer.min.js"></script>
-
-<script type="text/javascript">
-
-window.onload = function(){
-
-    imageMapResize();
-
-};
-
-</script>
-
+<a id="kembali" href="index.html">KEMBALI</a>
 </body>
-
 </html>
